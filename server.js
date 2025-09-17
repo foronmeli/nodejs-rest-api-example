@@ -29,6 +29,14 @@ app.post('/', function (req, res) {
   res.end(JSON.stringify(response))
 })
 
+app.post('/melissa', function (req, res) {
+  console.log('Metodo POST 2')
+  res.writeHead(200, {'Content-Type': 'application/json'})
+  var response = { "response" : "Este es el segundo POST" }
+  console.log(response)
+  res.end(JSON.stringify(response))
+})
+
 app.put('/', function (req, res) {
   console.log('PUT request received')
   res.writeHead(200, {'Content-Type': 'application/json'})
