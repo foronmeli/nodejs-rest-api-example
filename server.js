@@ -53,6 +53,14 @@ app.delete('/', function (req, res) {
   res.end(JSON.stringify(response))
 })
 
+app.delete('/melissa', function (req, res) {
+  console.log('Metodo DELETE 2')
+  res.writeHead(200, {'Content-Type': 'application/json'})
+  var response = { "response" : "Este es el segundo DELETE" }
+  console.log(response)
+  res.end(JSON.stringify(response))
+})
+
 const server = app.listen(app.get("port"), function () {
   const host = server.address().address
   const port = server.address().port
